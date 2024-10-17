@@ -72,4 +72,9 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-TransportSecurity,
   # and use secure cookies.
   config.force_ssl = false
+  host = "localhost:3000"
+  config.action_mailer.default_url_options = { host: host,
+                                               protocol: "http" }
+  # Use this if developing on localhost.
+  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 end
