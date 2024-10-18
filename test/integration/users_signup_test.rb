@@ -18,7 +18,7 @@ class UserSingupTest < UsersSignup
     assert_response :unprocessable_entity
     assert_template "users/new"
     assert_select "div#error_explanation", count: 1
-    assert_select "div.alert", "The form contains 5 errors."
+    assert_select "div.alert", "The form contains 4 errors."
   end
   test "valid signup information with account activation" do
     assert_difference "User.count", 1 do
